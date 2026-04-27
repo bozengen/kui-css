@@ -1,0 +1,117 @@
+/* KUI Button v0.1 */
+.k-btn {
+  min-height: 64px;
+  padding: 0 30px;
+  border-radius: var(--k-control-radius);
+  border: 1px solid rgba(255,255,255,0.38);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--k-space-2);
+  color: var(--k-text);
+  font-size: var(--k-font-size-lg);
+  font-weight: 600;
+  letter-spacing: .2px;
+  line-height: 1;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--k-shadow-button);
+  transition: transform var(--k-duration) var(--k-ease), box-shadow var(--k-duration) var(--k-ease);
+}
+
+.k-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.15) 30%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0.35) 100%);
+  opacity: .45;
+  pointer-events: none;
+}
+
+.k-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 28px rgba(0,0,0,0.18),
+    0 4px 10px rgba(0,0,0,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.40),
+    inset 0 -3px 8px rgba(0,0,0,0.14);
+}
+
+.k-btn:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 3px 8px rgba(0,0,0,0.15),
+    inset 0 2px 6px rgba(0,0,0,0.22);
+}
+
+
+.k-btn-xs { min-height: 32px; padding: 0 12px; font-size: var(--k-font-size-xs); border-radius: var(--k-radius-sm); }
+.k-btn-sm { min-height: 44px; padding: 0 18px; font-size: var(--k-font-size-sm); }
+.k-btn-md { min-height: 52px; padding: 0 24px; font-size: var(--k-font-size-md); }
+.k-btn-lg { min-height: 64px; padding: 0 30px; font-size: var(--k-font-size-lg); }
+.k-btn-xl { min-height: 76px; padding: 0 40px; font-size: var(--k-font-size-xl); }
+
+.k-btn-blue {
+  color: #083a5a;
+  background: linear-gradient(180deg, rgba(90,200,255,0.75), rgba(40,150,230,0.65));
+  border-color: rgba(200,240,255,0.9);
+}
+
+.k-btn-green {
+  color: #063f2a;
+  background: linear-gradient(180deg, rgba(90,230,170,0.75), rgba(35,180,120,0.65));
+  border-color: rgba(200,255,220,0.9);
+}
+
+.k-btn-orange {
+  color: #6a3000;
+  background: linear-gradient(180deg, rgba(255,180,90,0.8), rgba(235,120,40,0.7));
+  border-color: rgba(255,220,170,0.95);
+}
+
+.k-btn-red {
+  color: var(--k-red-900);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--k-red-400) 82%, white), color-mix(in srgb, var(--k-red-600) 72%, transparent));
+  border-color: color-mix(in srgb, var(--k-red-200) 92%, white);
+}
+
+.k-btn-gray {
+  color: #2e3338;
+  background: linear-gradient(180deg, rgba(240,245,250,0.85), rgba(200,210,220,0.7));
+  border-color: rgba(255,255,255,0.95);
+}
+
+.k-btn-white {
+  color: #2b2f33;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.65));
+  border-color: rgba(255,255,255,1);
+}
+
+/* Icon button — small square, used for row actions in tables */
+.k-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--k-control-radius);
+  border: var(--k-border-glass);
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(230,244,252,0.45));
+  box-shadow: 0 4px 12px rgba(54,175,230,0.14), inset 0 1px 2px rgba(255,255,255,0.9);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--k-muted-strong);
+  transition: all var(--k-duration-fast) var(--k-ease);
+}
+
+.k-icon-btn:hover,
+.k-icon-btn.is-active {
+  background: linear-gradient(180deg, rgba(90,200,255,0.75), rgba(40,150,230,0.6));
+  color: white;
+  border-color: rgba(200,240,255,0.9);
+  box-shadow: 0 8px 20px rgba(54,175,230,0.3);
+}

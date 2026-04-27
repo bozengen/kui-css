@@ -1,0 +1,33 @@
+/* KUI Segmented Control */
+.k-segmented {
+  display: inline-flex;
+  gap: var(--k-space-1);
+  padding: var(--k-space-1);
+  border-radius: var(--k-control-radius);
+  border: var(--k-border-glass);
+  background: linear-gradient(180deg, rgba(200,224,240,0.35), rgba(180,210,230,0.2));
+}
+
+.k-segment {
+  min-height: 36px;
+  padding: 0 var(--k-space-4);
+  border: none;
+  border-radius: calc(var(--k-control-radius) - 4px);
+  background: transparent;
+  color: var(--k-muted-strong);
+  font-size: var(--k-font-size-sm);
+  font-weight: var(--k-font-weight-semibold);
+  cursor: pointer;
+}
+
+.k-segment:hover:not(.is-active) {
+  background: rgba(255,255,255,0.42);
+  color: var(--k-text-strong);
+}
+
+.k-segment.is-active {
+  color: var(--k-text-strong);
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(240,250,255,0.78));
+  border: var(--k-border-glass);
+  box-shadow: 0 6px 18px rgba(54,175,230,0.2), inset 0 1px 0 rgba(255,255,255,1);
+}

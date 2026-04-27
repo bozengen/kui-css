@@ -1,0 +1,36 @@
+/* KUI Empty State */
+.k-empty {
+  padding: var(--k-space-10) var(--k-space-6);
+  border-radius: var(--k-radius-lg);
+  border: var(--k-border-glass);
+  background: linear-gradient(180deg, rgba(255,255,255,0.58), rgba(235,248,255,0.32));
+  box-shadow: var(--k-shadow-soft);
+  text-align: center;
+}
+
+.k-empty-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto var(--k-space-4);
+  border-radius: var(--k-control-radius);
+  display: grid;
+  place-items: center;
+  color: var(--k-blue-600);
+  background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(220,242,255,0.58));
+  border: var(--k-border-strong);
+  box-shadow: var(--k-shadow-control);
+  font-size: var(--k-font-size-xl);
+  font-weight: var(--k-font-weight-bold);
+}
+
+.k-empty-title {
+  color: var(--k-text-strong);
+  font-size: var(--k-font-size-lg);
+  font-weight: var(--k-font-weight-semibold);
+}
+
+.k-empty-desc {
+  margin-top: var(--k-space-2);
+  color: var(--k-muted-strong);
+  font-size: var(--k-font-size-sm);
+}

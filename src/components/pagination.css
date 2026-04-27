@@ -1,0 +1,58 @@
+/* KUI Pagination */
+.k-pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--k-space-2);
+  flex-wrap: wrap;
+}
+
+.k-page-btn {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 var(--k-space-3);
+  border-radius: var(--k-control-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--k-font-size-sm);
+  font-weight: 600;
+  color: var(--k-muted-strong);
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(230,244,252,0.45));
+  border: var(--k-border-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 14px rgba(54,175,230,0.14), inset 0 1px 2px rgba(255,255,255,0.9);
+  cursor: pointer;
+  transition: all var(--k-duration-fast) var(--k-ease);
+  user-select: none;
+}
+
+.k-page-btn:hover:not(:disabled):not(.is-active) {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(220,242,255,0.6));
+  color: var(--k-text-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(54,175,230,0.22), inset 0 1px 2px rgba(255,255,255,0.95);
+}
+
+.k-page-btn.is-active {
+  background: linear-gradient(180deg, rgba(90,200,255,0.85), rgba(40,150,230,0.75));
+  color: white;
+  border-color: rgba(200,240,255,0.9);
+  box-shadow: 0 10px 24px rgba(54,175,230,0.4), inset 0 1px 2px rgba(255,255,255,0.5);
+}
+
+.k-page-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.k-page-dots {
+  min-width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--k-muted);
+  font-size: var(--k-font-size-sm);
+  font-weight: 600;
+}

@@ -1,0 +1,67 @@
+/* KUI Accordion */
+.k-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--k-space-2);
+}
+
+.k-accordion-item {
+  border-radius: var(--k-radius-lg);
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.62), rgba(235,248,255,0.28));
+  border: var(--k-border-glass);
+  backdrop-filter: var(--k-blur-sm);
+  -webkit-backdrop-filter: var(--k-blur-sm);
+  box-shadow: 0 8px 22px rgba(54,175,230,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+  transition: box-shadow var(--k-duration) ease;
+}
+
+[data-theme="dark"] .k-accordion-item {
+  background: linear-gradient(180deg, rgba(28,42,64,0.65), rgba(20,32,50,0.35));
+}
+
+.k-accordion-item[open] {
+  box-shadow: 0 14px 32px rgba(54,175,230,0.2), inset 0 1px 0 rgba(255,255,255,0.95);
+}
+
+.k-accordion-item summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--k-space-3);
+  padding: var(--k-space-4) var(--k-space-5);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--k-text-strong);
+  font-size: var(--k-font-size-md);
+  user-select: none;
+}
+
+.k-accordion-item summary::-webkit-details-marker { display: none; }
+
+.k-accordion-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(200,220,240,0.4);
+  display: grid;
+  place-items: center;
+  color: var(--k-muted-strong);
+  font-size: var(--k-font-size-sm);
+  transition: transform var(--k-duration) var(--k-ease);
+  flex-shrink: 0;
+}
+
+.k-accordion-item[open] .k-accordion-icon {
+  transform: rotate(180deg);
+  background: linear-gradient(180deg, rgba(90,200,255,0.5), rgba(40,150,230,0.38));
+  color: var(--k-blue-600);
+}
+
+.k-accordion-body {
+  padding: 0 var(--k-space-5) var(--k-space-5);
+  color: var(--k-muted-strong);
+  font-size: var(--k-font-size-md);
+  line-height: var(--k-leading-relaxed);
+}

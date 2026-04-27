@@ -1,0 +1,58 @@
+/* KUI Utilities — Flexbox */
+
+/* display */
+:where(.k-flex)        { display: flex; }
+:where(.k-inline-flex) { display: inline-flex; }
+
+/* direction */
+:where(.k-flex-row)         { flex-direction: row; }
+:where(.k-flex-row-reverse) { flex-direction: row-reverse; }
+:where(.k-flex-col)         { flex-direction: column; }
+:where(.k-flex-col-reverse) { flex-direction: column-reverse; }
+
+/* wrap */
+:where(.k-flex-wrap)   { flex-wrap: wrap; }
+:where(.k-flex-nowrap) { flex-wrap: nowrap; }
+
+/* flex sizing */
+:where(.k-flex-1)    { flex: 1 1 0%; }
+:where(.k-flex-auto) { flex: 1 1 auto; }
+:where(.k-flex-none) { flex: none; }
+:where(.k-flex-init) { flex: 0 0 auto; }
+
+/* grow / shrink */
+:where(.k-grow)     { flex-grow: 1; }
+:where(.k-grow-0)   { flex-grow: 0; }
+:where(.k-shrink)   { flex-shrink: 1; }
+:where(.k-shrink-0) { flex-shrink: 0; }
+
+/* align-items */
+:where(.k-items-start)    { align-items: flex-start; }
+:where(.k-items-center)   { align-items: center; }
+:where(.k-items-end)      { align-items: flex-end; }
+:where(.k-items-baseline) { align-items: baseline; }
+:where(.k-items-stretch)  { align-items: stretch; }
+
+/* justify-content */
+:where(.k-justify-start)   { justify-content: flex-start; }
+:where(.k-justify-center)  { justify-content: center; }
+:where(.k-justify-end)     { justify-content: flex-end; }
+:where(.k-justify-between) { justify-content: space-between; }
+:where(.k-justify-around)  { justify-content: space-around; }
+:where(.k-justify-evenly)  { justify-content: space-evenly; }
+
+/* align-self */
+:where(.k-self-auto)    { align-self: auto; }
+:where(.k-self-start)   { align-self: flex-start; }
+:where(.k-self-center)  { align-self: center; }
+:where(.k-self-end)     { align-self: flex-end; }
+:where(.k-self-stretch) { align-self: stretch; }
+
+/* order */
+:where(.k-order-first) { order: -9999; }
+:where(.k-order-last)  { order: 9999; }
+:where(.k-order-1)     { order: 1; }
+:where(.k-order-2)     { order: 2; }
+:where(.k-order-3)     { order: 3; }
+:where(.k-order-4)     { order: 4; }
+:where(.k-order-5)     { order: 5; }

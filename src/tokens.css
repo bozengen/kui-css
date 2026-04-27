@@ -1,0 +1,308 @@
+/* KUI Tokens — Design System */
+:root {
+  /* ── Base Surfaces ─────────────────────────────────── */
+  --k-bg:             #f4f6f9;
+  --k-bg-soft:        #eef2f6;
+  --k-surface:        rgba(255, 255, 255, 0.62);
+  --k-surface-strong: rgba(255, 255, 255, 0.82);
+  --k-surface-muted:  rgba(230, 245, 252, 0.35);
+
+  /* ── Text ──────────────────────────────────────────── */
+  --k-text:        #39414a;
+  --k-text-strong: #2b3a44;
+  --k-muted:       #8d959f;
+  --k-muted-strong:#5a6470;
+  --k-white:       #ffffff;
+
+  /* ── Brand Color Palette ───────────────────────────── */
+  /* Blue */
+  --k-blue-100: #e8f8ff;
+  --k-blue-200: #c3eeff;
+  --k-blue-300: #8be7ff;
+  --k-blue-400: #4fc4fa;
+  --k-blue-500: #1aaae8;
+  --k-blue-600: #0d88cc;
+  --k-blue-700: #0768a8;
+  --k-blue-800: #054d82;
+  --k-blue-900: #033660;
+
+  /* Green */
+  --k-green-100: #e6faf2;
+  --k-green-200: #b8f0d6;
+  --k-green-300: #5ae6aa;
+  --k-green-400: #2ecf88;
+  --k-green-500: #23b478;
+  --k-green-600: #189660;
+  --k-green-700: #0e7549;
+  --k-green-800: #085534;
+  --k-green-900: #04391f;
+
+  /* Orange */
+  --k-orange-100: #fff5e6;
+  --k-orange-200: #ffe0b3;
+  --k-orange-300: #ffb45a;
+  --k-orange-400: #f59030;
+  --k-orange-500: #eb7828;
+  --k-orange-600: #d45e14;
+  --k-orange-700: #b0460a;
+  --k-orange-800: #883204;
+  --k-orange-900: #5e2001;
+
+  /* Red */
+  --k-red-100: #fff1f3;
+  --k-red-200: #ffd6dc;
+  --k-red-300: #ffa3ae;
+  --k-red-400: #f47d8b;
+  --k-red-500: #e85f70;
+  --k-red-600: #c94a5a;
+  --k-red-700: #a53645;
+  --k-red-800: #7d2431;
+  --k-red-900: #541722;
+
+  /* Gray */
+  --k-gray-100: #f7f9fb;
+  --k-gray-200: #f0f5fa;
+  --k-gray-300: #e2e8f0;
+  --k-gray-400: #c8d2dc;
+  --k-gray-500: #9eaab8;
+  --k-gray-600: #7a8896;
+  --k-gray-700: #5a6470;
+  --k-gray-800: #3a4450;
+  --k-gray-900: #1e2836;
+
+  /* Legacy aliases (backward compat) */
+  --k-blue-1: var(--k-blue-300);
+  --k-blue-2: var(--k-blue-400);
+  --k-blue-3: #aeefff;
+  --k-green-1: var(--k-green-300);
+  --k-green-2: var(--k-green-500);
+  --k-orange-1: var(--k-orange-300);
+  --k-orange-2: var(--k-orange-500);
+  --k-red-1: var(--k-red-400);
+  --k-red-2: var(--k-red-600);
+  --k-gray-1: var(--k-gray-200);
+  --k-gray-2: var(--k-gray-400);
+
+  /* ── Semantic Colors ────────────────────────────────── */
+  --k-primary: var(--k-blue-400);
+  --k-success: var(--k-green-500);
+  --k-warning: var(--k-orange-500);
+  --k-danger:  var(--k-red-600);
+  --k-info:    var(--k-blue-300);
+
+  /* ── Radius ─────────────────────────────────────────── */
+  --k-radius-none: 0;
+  --k-radius-xs:   8px;
+  --k-radius-sm:   10px;
+  --k-radius-md:   18px;
+  --k-radius-lg:   28px;
+  --k-radius-xl:   42px;
+  --k-radius-2xl:  56px;
+  --k-radius-pill: 999px;
+  --k-control-radius: var(--k-radius-md);
+
+  /* ── Spacing (4px base scale) ───────────────────────── */
+  --k-space-0:  0;
+  --k-space-1:  4px;
+  --k-space-2:  8px;
+  --k-space-3:  12px;
+  --k-space-4:  16px;
+  --k-space-5:  20px;
+  --k-space-6:  24px;
+  --k-space-7:  28px;
+  --k-space-8:  32px;
+  --k-space-9:  36px;
+  --k-space-10: 40px;
+  --k-space-11: 44px;
+  --k-space-12: 48px;
+  --k-space-14: 56px;
+  --k-space-16: 64px;
+  --k-space-20: 80px;
+  --k-space-24: 96px;
+
+  /* ── Typography ─────────────────────────────────────── */
+  --k-font-family:  Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+  --k-font-size-xs:  12px;
+  --k-font-size-sm:  14px;
+  --k-font-size-md:  16px;
+  --k-font-size-lg:  18px;
+  --k-font-size-xl:  22px;
+  --k-font-size-2xl: 28px;
+  --k-font-size-3xl: 34px;
+
+  --k-font-weight-light:    300;
+  --k-font-weight-normal:   400;
+  --k-font-weight-medium:   500;
+  --k-font-weight-semibold: 600;
+  --k-font-weight-bold:     700;
+  --k-font-weight-black:    900;
+
+  --k-leading-none:    1;
+  --k-leading-tight:   1.25;
+  --k-leading-snug:    1.375;
+  --k-leading-normal:  1.5;
+  --k-leading-relaxed: 1.625;
+  --k-leading-loose:   2;
+
+  --k-tracking-tight:  -0.05em;
+  --k-tracking-normal: 0em;
+  --k-tracking-wide:   0.025em;
+  --k-tracking-wider:  0.05em;
+  --k-tracking-widest: 0.1em;
+
+  /* ── Glass / Backdrop ───────────────────────────────── */
+  --k-blur-sm: blur(12px) saturate(140%);
+  --k-blur-md: blur(18px) saturate(160%);
+  --k-blur-lg: blur(24px) saturate(175%);
+
+  /* ── Borders ────────────────────────────────────────── */
+  --k-border-glass:  1px solid rgba(255, 255, 255, 0.85);
+  --k-border-strong: 1px solid rgba(255, 255, 255, 0.95);
+  --k-border-blue:   1px solid rgba(130, 220, 255, 0.98);
+  --k-border-color:  rgba(200, 214, 226, 0.6);
+
+  /* Scrollbar */
+  --k-scrollbar-size: 10px;
+  --k-scrollbar-radius: var(--k-control-radius);
+  --k-scrollbar-track: rgba(220, 236, 246, 0.42);
+  --k-scrollbar-thumb: rgba(125, 184, 214, 0.46);
+  --k-scrollbar-thumb-hover: rgba(79, 196, 250, 0.66);
+
+  /* ── Shadows ────────────────────────────────────────── */
+  --k-shadow-soft:
+    0 18px 42px rgba(54, 175, 230, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  --k-shadow-panel:
+    0 24px 54px rgba(70, 190, 245, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(160, 210, 235, 0.45);
+
+  --k-shadow-card:
+    0 36px 78px rgba(70, 190, 245, 0.24),
+    0 18px 36px rgba(36, 70, 100, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(205, 235, 248, 0.85);
+
+  --k-shadow-control:
+    0 12px 28px rgba(54, 175, 230, 0.18),
+    inset 0 2px 5px rgba(255, 255, 255, 0.95),
+    inset 0 -3px 8px rgba(30, 120, 170, 0.10);
+
+  --k-shadow-control-focus:
+    0 16px 34px rgba(54, 190, 245, 0.24),
+    0 0 0 5px rgba(120, 220, 255, 0.18),
+    inset 0 2px 5px rgba(255, 255, 255, 0.98),
+    inset 0 -3px 8px rgba(30, 120, 170, 0.12);
+
+  --k-shadow-button:
+    0 6px 18px rgba(0, 0, 0, 0.13),
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.40),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.10);
+
+  --k-shadow-sm:  0 2px 8px rgba(54, 100, 140, 0.12);
+  --k-shadow-md:  0 8px 24px rgba(54, 120, 160, 0.16);
+  --k-shadow-lg:  0 20px 48px rgba(54, 140, 190, 0.22);
+
+  /* ── Transition ─────────────────────────────────────── */
+  --k-ease:          cubic-bezier(.2, .8, .2, 1);
+  --k-duration-fast: .15s;
+  --k-duration:      .22s;
+  --k-duration-slow: .4s;
+
+  /* ── Layout ─────────────────────────────────────────── */
+  --k-sidebar-width:  260px;
+  --k-navbar-height:  64px;
+  --k-control-height: 62px;
+  --k-container-sm:   640px;
+  --k-container-md:   768px;
+  --k-container-lg:   1024px;
+  --k-container-xl:   1280px;
+  --k-container-2xl:  1536px;
+
+  /* ── Z-index scale ──────────────────────────────────── */
+  --k-z-base:    0;
+  --k-z-raised:  10;
+  --k-z-dropdown:20;
+  --k-z-sticky:  30;
+  --k-z-overlay: 40;
+  --k-z-modal:   50;
+  --k-z-toast:   60;
+  --k-z-tooltip: 70;
+}
+
+/* ── Dark Theme ─────────────────────────────────────────── */
+[data-theme="dark"] {
+  /* Backgrounds — #0B1220 main, #0A1324 sidebar/soft */
+  --k-bg:             #0b1220;
+  --k-bg-soft:        #0a1324;
+  --k-surface:        rgba(17, 28, 47, 0.82);
+  --k-surface-strong: rgba(24, 36, 62, 0.92);
+  --k-surface-muted:  rgba(11, 18, 32, 0.50);
+
+  /* Text — main #E6EDF3, normal #C9D1D9, secondary #8B9BB4, disabled #5B6B86 */
+  --k-text:        #c9d1d9;
+  --k-text-strong: #e6edf3;
+  --k-muted:       #5b6b86;
+  --k-muted-strong:#8b9bb4;
+  --k-white:       #ffffff;
+
+  /* Semantic colors — adjusted for dark background */
+  --k-primary: #3b82f6;
+  --k-success: #22c55e;
+  --k-warning: #f59e0b;
+  --k-danger:  #ef4444;
+
+  /* Blue palette tweaks for dark mode */
+  --k-blue-400: #60a5fa;
+  --k-blue-500: #3b82f6;
+  --k-blue-600: #2563eb;
+
+  /* Borders — based on card-border #1B2A44, table-border #1F2F4B */
+  --k-border-glass:  1px solid rgba(27, 42, 68, 0.80);
+  --k-border-strong: 1px solid rgba(31, 47, 75, 0.90);
+  --k-border-blue:   1px solid rgba(59, 130, 246, 0.45);
+  --k-border-color:  rgba(27, 42, 68, 0.75);
+
+  /* Scrollbar */
+  --k-scrollbar-track: rgba(10, 19, 36, 0.55);
+  --k-scrollbar-thumb: rgba(27, 42, 68, 0.80);
+  --k-scrollbar-thumb-hover: rgba(59, 130, 246, 0.60);
+
+  --k-blur-sm: blur(12px) saturate(115%);
+  --k-blur-md: blur(18px) saturate(125%);
+  --k-blur-lg: blur(24px) saturate(135%);
+
+  --k-shadow-soft:
+    0 18px 42px rgba(0, 4, 12, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  --k-shadow-panel:
+    0 24px 54px rgba(0, 4, 14, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -1px 0 rgba(59, 130, 246, 0.14);
+
+  --k-shadow-card:
+    0 36px 78px rgba(0, 3, 10, 0.82),
+    0 18px 36px rgba(0, 5, 18, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 0 -1px 0 rgba(59, 130, 246, 0.12);
+
+  --k-shadow-control:
+    0 12px 28px rgba(0, 4, 14, 0.52),
+    inset 0 2px 5px rgba(255, 255, 255, 0.04),
+    inset 0 -3px 8px rgba(0, 8, 28, 0.32);
+
+  --k-shadow-control-focus:
+    0 16px 34px rgba(0, 4, 14, 0.58),
+    0 0 0 5px rgba(59, 130, 246, 0.22),
+    inset 0 2px 5px rgba(255, 255, 255, 0.05),
+    inset 0 -3px 8px rgba(0, 8, 28, 0.35);
+
+  --k-shadow-button:
+    0 14px 30px rgba(0, 0, 0, 0.62),
+    inset 0 2px 4px rgba(255, 255, 255, 0.08),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.42);
+}

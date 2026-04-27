@@ -1,0 +1,204 @@
+/* KUI Dropdown v0.1 */
+.k-dropdown {
+  position: relative;
+  width: 100%;
+  /* height intentionally not set — let details expand naturally */
+}
+
+/* Raise z-index only when the menu is open to avoid stacking issues between siblings */
+.k-dropdown[open] { z-index: var(--k-z-dropdown); }
+
+/* Glass panels create stacking contexts; lift the container while a menu is open. */
+:where(.k-panel, .k-card, .k-toolbar):has(.k-dropdown[open]) {
+  position: relative;
+  z-index: var(--k-z-dropdown);
+}
+
+/* Dropdown menus inside modals must be allowed to escape modal body clipping. */
+:where(.k-modal, .k-modal-body):has(.k-dropdown[open]) {
+  overflow: visible;
+}
+
+.k-dropdown summary {
+  height: var(--k-control-height);
+  padding: 0 12px 0 24px;
+  border-radius: var(--k-control-radius);
+  border: var(--k-border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  list-style: none;
+  cursor: pointer;
+  color: var(--k-text);
+  font-size: 17px;
+  font-weight: 500;
+  background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(225,244,252,0.44));
+  backdrop-filter: var(--k-blur-md);
+  -webkit-backdrop-filter: var(--k-blur-md);
+  box-shadow: var(--k-shadow-control);
+  transition: box-shadow var(--k-duration) var(--k-ease), border-color var(--k-duration) var(--k-ease), background var(--k-duration) var(--k-ease);
+}
+
+.k-dropdown summary::-webkit-details-marker { display: none; }
+
+/* Truncate summary text when it's long; icon never shrinks */
+.k-dropdown summary > :first-child:not(.k-dropdown-icon) {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.k-dropdown-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--k-muted-strong);
+  font-size: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(218,239,249,0.68));
+  border: 1px solid rgba(255,255,255,0.95);
+  box-shadow: 0 6px 14px rgba(54,175,230,0.2), inset 0 1px 2px rgba(255,255,255,0.95), inset 0 -2px 5px rgba(30,100,140,0.08);
+  transition: transform var(--k-duration) ease;
+}
+
+.k-dropdown-icon::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.k-dropdown summary:hover,
+.k-dropdown[open] summary {
+  border-color: rgba(130, 220, 255, 0.98);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(215,242,253,0.52));
+  box-shadow: var(--k-shadow-control-focus);
+}
+
+.k-dropdown[open] .k-dropdown-icon { transform: rotate(180deg); }
+
+.k-dropdown-menu {
+  position: absolute;
+  top: calc(var(--k-control-height) + 8px);
+  left: 0;
+  right: 0;
+  z-index: var(--k-z-dropdown);
+  padding: 10px;
+  border-radius: var(--k-control-radius);
+  border: var(--k-border-strong);
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(238,249,255,0.9));
+  backdrop-filter: var(--k-blur-lg);
+  -webkit-backdrop-filter: var(--k-blur-lg);
+  box-shadow: 0 30px 60px rgba(54,175,230,0.3), 0 14px 34px rgba(30,60,80,0.18), inset 0 1px 0 rgba(255,255,255,0.98), inset 0 -1px 0 rgba(130,190,220,0.38);
+  overflow: hidden;
+  animation: kDropdownIn .18s ease both;
+}
+
+[data-theme="dark"] .k-dropdown-menu {
+  background: linear-gradient(180deg, rgba(28,42,64,0.96), rgba(18,30,48,0.92));
+  border: var(--k-border-strong);
+  box-shadow: 0 30px 60px rgba(0,15,40,0.72), 0 14px 34px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -1px 0 rgba(60,120,180,0.28);
+}
+
+@keyframes kDropdownIn {
+  from { opacity: 0; transform: translateY(-8px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.k-dropdown-item {
+  min-height: 48px;
+  padding: 0 15px;
+  border-radius: var(--k-control-radius);
+  display: flex;
+  align-items: center;
+  gap: var(--k-space-3);
+  color: #3c4650;
+  font-size: var(--k-font-size-md);
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background var(--k-duration-fast) ease, box-shadow var(--k-duration-fast) ease, transform var(--k-duration-fast) ease;
+}
+
+.k-dropdown-item:hover {
+  background: rgba(255,255,255,0.45);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 8px 18px rgba(54,175,230,0.13);
+  transform: translateY(-1px);
+}
+
+/* Select button — looks like an input, opens a Teleport'd dropdown */
+.k-select-btn {
+  height: var(--k-control-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 12px 0 24px;
+  border-radius: var(--k-control-radius);
+  border: var(--k-border-strong);
+  color: var(--k-text);
+  font-size: 17px;
+  font-weight: 500;
+  background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(225,244,252,0.44));
+  backdrop-filter: var(--k-blur-md);
+  -webkit-backdrop-filter: var(--k-blur-md);
+  box-shadow: var(--k-shadow-control);
+  cursor: pointer;
+  transition: box-shadow var(--k-duration) var(--k-ease), border-color var(--k-duration) var(--k-ease);
+  min-width: 160px;
+}
+
+/* Small variant for .k-dropdown (<details> based) */
+.k-dropdown-sm summary {
+  height: 48px;
+  padding: 0 10px 0 20px;
+  font-size: var(--k-font-size-md);
+}
+
+.k-dropdown-sm .k-dropdown-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.k-dropdown-sm .k-dropdown-menu {
+  top: calc(48px + 8px);
+}
+
+.k-select-btn-sm {
+  height: 48px;
+  min-width: 180px;
+  padding: 0 10px 0 20px;
+  border-radius: var(--k-control-radius);
+  font-size: var(--k-font-size-md);
+}
+
+.k-select-btn-sm .k-dropdown-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Text truncates; icon always stays visible */
+.k-select-btn > span:first-child {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.k-select-btn .k-dropdown-icon { flex-shrink: 0; }
+
+.k-select-btn:hover,
+.k-select-btn.is-open {
+  border-color: rgba(130, 220, 255, 0.98);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(215,242,253,0.52));
+  box-shadow: var(--k-shadow-control-focus);
+}

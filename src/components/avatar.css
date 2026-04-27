@@ -1,0 +1,75 @@
+/* KUI Avatar */
+.k-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(90,200,255,0.75), rgba(40,150,230,0.65));
+  border: var(--k-border-strong);
+  box-shadow: 0 8px 20px rgba(54,175,230,0.28);
+  color: white;
+  font-weight: 700;
+  font-size: var(--k-font-size-md);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.k-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* sizes */
+.k-avatar-xs { width: 26px; height: 26px; font-size: var(--k-font-size-xs); }
+.k-avatar-sm { width: 36px; height: 36px; font-size: var(--k-font-size-sm); }
+.k-avatar-md { width: 44px; height: 44px; font-size: var(--k-font-size-md); }
+.k-avatar-lg { width: 56px; height: 56px; font-size: var(--k-font-size-lg); }
+.k-avatar-xl { width: 72px; height: 72px; font-size: var(--k-font-size-xl); }
+
+/* color variants */
+.k-avatar-blue   { background: linear-gradient(180deg, rgba(90,200,255,0.8),  rgba(40,150,230,0.7)); }
+.k-avatar-green  { background: linear-gradient(180deg, rgba(90,230,170,0.8),  rgba(35,180,120,0.7)); }
+.k-avatar-orange { background: linear-gradient(180deg, rgba(255,180,90,0.85), rgba(235,120,40,0.72)); }
+.k-avatar-red    { background: linear-gradient(180deg, color-mix(in srgb, var(--k-red-400) 82%, white), color-mix(in srgb, var(--k-red-600) 72%, transparent)); }
+.k-avatar-gray   { background: linear-gradient(180deg, rgba(200,212,224,0.9), rgba(160,176,192,0.75)); }
+
+/* rounded square variant */
+.k-avatar-square { border-radius: var(--k-radius-md); }
+
+/* status dot */
+.k-avatar-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.k-avatar-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.k-avatar-status-online  { background: var(--k-green-500); }
+.k-avatar-status-offline { background: var(--k-gray-400); }
+.k-avatar-status-busy    { background: var(--k-red-500); }
+.k-avatar-status-away    { background: var(--k-orange-400); }
+
+/* avatar group */
+.k-avatar-group {
+  display: flex;
+}
+
+.k-avatar-group .k-avatar {
+  margin-left: -10px;
+  border: 2px solid white;
+  box-shadow: 0 4px 12px rgba(54,175,230,0.2);
+}
+
+.k-avatar-group .k-avatar:first-child { margin-left: 0; }

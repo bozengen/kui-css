@@ -1,0 +1,99 @@
+/* KUI Stat / KPI Card */
+.k-stat {
+  padding: var(--k-space-6);
+  border-radius: var(--k-radius-lg);
+  background: linear-gradient(180deg, rgba(255,255,255,0.68), rgba(235,247,255,0.36));
+  border: var(--k-border-glass);
+  backdrop-filter: var(--k-blur-md);
+  -webkit-backdrop-filter: var(--k-blur-md);
+  box-shadow: var(--k-shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--k-space-2);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .k-stat {
+  background: linear-gradient(180deg, rgba(28,42,64,0.72), rgba(20,32,50,0.42));
+}
+
+.k-stat::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79,196,250,0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.k-stat-label {
+  font-size: var(--k-font-size-sm);
+  font-weight: 600;
+  color: var(--k-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--k-tracking-wider);
+}
+
+.k-stat-value {
+  font-size: var(--k-font-size-2xl);
+  font-weight: 700;
+  color: var(--k-text-strong);
+  letter-spacing: var(--k-tracking-tight);
+  line-height: var(--k-leading-none);
+}
+
+.k-stat-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--k-space-1);
+  font-size: var(--k-font-size-sm);
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--k-radius-pill);
+}
+
+.k-stat-trend-up {
+  color: var(--k-green-600);
+  background: rgba(90,230,170,0.18);
+}
+
+.k-stat-trend-down {
+  color: var(--k-red-600);
+  background: color-mix(in srgb, var(--k-red-300) 22%, transparent);
+}
+
+.k-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--k-radius-md);
+  display: grid;
+  place-items: center;
+  font-size: var(--k-font-size-lg);
+  flex-shrink: 0;
+}
+
+.k-stat-icon-blue {
+  background: linear-gradient(180deg, rgba(90,200,255,0.75), rgba(40,150,230,0.6));
+  color: white;
+  box-shadow: 0 8px 18px rgba(54,175,230,0.35);
+}
+
+.k-stat-icon-green {
+  background: linear-gradient(180deg, rgba(90,230,170,0.75), rgba(35,180,120,0.6));
+  color: white;
+  box-shadow: 0 8px 18px rgba(35,180,120,0.3);
+}
+
+.k-stat-icon-orange {
+  background: linear-gradient(180deg, rgba(255,180,90,0.8), rgba(235,120,40,0.65));
+  color: white;
+  box-shadow: 0 8px 18px rgba(235,120,40,0.3);
+}
+
+.k-stat-icon-red {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--k-red-400) 82%, white), color-mix(in srgb, var(--k-red-600) 68%, transparent));
+  color: white;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--k-red-600) 30%, transparent);
+}

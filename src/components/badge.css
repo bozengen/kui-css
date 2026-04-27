@@ -1,0 +1,35 @@
+/* KUI Badge */
+.k-badge {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: calc(var(--k-control-radius) - 8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: var(--k-blue-500);
+  font-size: var(--k-font-size-xs);
+  font-weight: var(--k-font-weight-bold);
+  line-height: 1;
+  box-shadow: 0 6px 14px rgba(54,175,230,0.24);
+}
+
+.k-badge-green { background: var(--k-green-500); }
+.k-badge-orange { background: var(--k-orange-500); }
+.k-badge-red { background: var(--k-red-500); }
+.k-badge-gray { background: var(--k-gray-500); }
+
+.k-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background: var(--k-blue-500);
+  box-shadow: 0 0 0 4px rgba(79,196,250,0.16);
+}
+
+.k-status-dot-green { background: var(--k-green-500); box-shadow: 0 0 0 4px rgba(35,180,120,0.14); }
+.k-status-dot-orange { background: var(--k-orange-500); box-shadow: 0 0 0 4px rgba(235,120,40,0.14); }
+.k-status-dot-red { background: var(--k-red-500); box-shadow: 0 0 0 4px color-mix(in srgb, var(--k-red-500) 14%, transparent); }
+.k-status-dot-gray { background: var(--k-gray-500); box-shadow: 0 0 0 4px rgba(158,170,184,0.14); }

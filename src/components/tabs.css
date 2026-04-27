@@ -1,0 +1,81 @@
+/* KUI Tabs */
+.k-tabs {
+  display: flex;
+  gap: var(--k-space-1);
+  padding: var(--k-space-1);
+  border-radius: var(--k-control-radius);
+  background: linear-gradient(180deg, rgba(200,224,240,0.35), rgba(180,210,230,0.2));
+  border: var(--k-border-glass);
+  width: fit-content;
+}
+
+[data-theme="dark"] .k-tabs {
+  background: linear-gradient(180deg, rgba(20,35,60,0.5), rgba(15,28,46,0.35));
+}
+
+.k-tab {
+  padding: var(--k-space-2) var(--k-space-5);
+  border-radius: calc(var(--k-control-radius) - 4px);
+  font-size: var(--k-font-size-sm);
+  font-weight: 600;
+  color: var(--k-muted-strong);
+  cursor: pointer;
+  transition: all var(--k-duration-fast) var(--k-ease);
+  white-space: nowrap;
+  user-select: none;
+  border: none;
+  background: transparent;
+}
+
+.k-tab:hover:not(.is-active) {
+  color: var(--k-text-strong);
+  background: rgba(255,255,255,0.4);
+}
+
+.k-tab.is-active {
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(240,250,255,0.78));
+  color: var(--k-text-strong);
+  box-shadow: 0 6px 18px rgba(54,175,230,0.22), inset 0 1px 0 rgba(255,255,255,1);
+  border: var(--k-border-glass);
+}
+
+[data-theme="dark"] .k-tab.is-active {
+  background: linear-gradient(180deg, rgba(35,52,80,0.9), rgba(28,42,64,0.75));
+  color: var(--k-text-strong);
+}
+
+/* underline variant */
+.k-tabs-line {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--k-border-color);
+  border-radius: 0;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 0;
+  width: auto;
+}
+
+.k-tabs-line .k-tab {
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  padding: var(--k-space-3) var(--k-space-5);
+}
+
+.k-tabs-line .k-tab.is-active {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid var(--k-blue-400);
+  color: var(--k-blue-500);
+  margin-bottom: -2px;
+}
+
+/* tab panel */
+.k-tab-panels { margin-top: var(--k-space-5); }
+
+.k-tab-panel { display: none; }
+.k-tab-panel.is-active { display: block; }

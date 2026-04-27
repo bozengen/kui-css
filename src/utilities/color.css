@@ -1,0 +1,68 @@
+/* KUI Utilities — Color */
+
+/* text colors — semantic */
+:where(.k-text-primary) { color: var(--k-primary); }
+:where(.k-text-success) { color: var(--k-success); }
+:where(.k-text-warning) { color: var(--k-warning); }
+:where(.k-text-danger)  { color: var(--k-danger); }
+:where(.k-text-info)    { color: var(--k-info); }
+:where(.k-text-muted)   { color: var(--k-muted); }
+:where(.k-text-strong)  { color: var(--k-text-strong); }
+:where(.k-text-white)   { color: var(--k-white); }
+:where(.k-text-base)    { color: var(--k-text); }
+
+/* text colors — brand */
+:where(.k-text-blue-100) { color: var(--k-blue-100); }
+:where(.k-text-blue-200) { color: var(--k-blue-200); }
+:where(.k-text-blue-300) { color: var(--k-blue-300); }
+:where(.k-text-blue-400) { color: var(--k-blue-400); }
+:where(.k-text-blue-500) { color: var(--k-blue-500); }
+:where(.k-text-blue-600) { color: var(--k-blue-600); }
+:where(.k-text-blue-700) { color: var(--k-blue-700); }
+
+:where(.k-text-green-300) { color: var(--k-green-300); }
+:where(.k-text-green-400) { color: var(--k-green-400); }
+:where(.k-text-green-500) { color: var(--k-green-500); }
+:where(.k-text-green-600) { color: var(--k-green-600); }
+
+:where(.k-text-orange-300) { color: var(--k-orange-300); }
+:where(.k-text-orange-400) { color: var(--k-orange-400); }
+:where(.k-text-orange-500) { color: var(--k-orange-500); }
+
+:where(.k-text-red-400) { color: var(--k-red-400); }
+:where(.k-text-red-500) { color: var(--k-red-500); }
+:where(.k-text-red-600) { color: var(--k-red-600); }
+
+:where(.k-text-gray-400) { color: var(--k-gray-400); }
+:where(.k-text-gray-500) { color: var(--k-gray-500); }
+:where(.k-text-gray-600) { color: var(--k-gray-600); }
+:where(.k-text-gray-700) { color: var(--k-gray-700); }
+
+/* background colors — surface */
+:where(.k-bg-surface)       { background-color: var(--k-surface); }
+:where(.k-bg-surface-strong){ background-color: var(--k-surface-strong); }
+:where(.k-bg-soft)          { background-color: var(--k-bg-soft); }
+:where(.k-bg-muted)         { background-color: var(--k-surface-muted); }
+:where(.k-bg-white)         { background-color: #ffffff; }
+:where(.k-bg-transparent)   { background-color: transparent; }
+
+/* background colors — brand */
+:where(.k-bg-blue-100)  { background-color: var(--k-blue-100); }
+:where(.k-bg-blue-200)  { background-color: var(--k-blue-200); }
+:where(.k-bg-blue-400)  { background-color: var(--k-blue-400); }
+:where(.k-bg-blue-500)  { background-color: var(--k-blue-500); }
+:where(.k-bg-green-100) { background-color: var(--k-green-100); }
+:where(.k-bg-green-500) { background-color: var(--k-green-500); }
+:where(.k-bg-orange-100){ background-color: var(--k-orange-100); }
+:where(.k-bg-orange-500){ background-color: var(--k-orange-500); }
+:where(.k-bg-red-100)   { background-color: var(--k-red-100); }
+:where(.k-bg-red-500)   { background-color: var(--k-red-500); }
+:where(.k-bg-gray-100)  { background-color: var(--k-gray-100); }
+:where(.k-bg-gray-200)  { background-color: var(--k-gray-200); }
+
+/* opacity */
+:where(.k-opacity-0)   { opacity: 0; }
+:where(.k-opacity-25)  { opacity: 0.25; }
+:where(.k-opacity-50)  { opacity: 0.5; }
+:where(.k-opacity-75)  { opacity: 0.75; }
+:where(.k-opacity-100) { opacity: 1; }

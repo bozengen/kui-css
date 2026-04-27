@@ -1,0 +1,51 @@
+/* KUI Switch */
+.k-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--k-space-3);
+  color: var(--k-text);
+  font-size: var(--k-font-size-sm);
+  font-weight: var(--k-font-weight-semibold);
+  cursor: pointer;
+  user-select: none;
+}
+
+.k-switch-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.k-switch-track {
+  position: relative;
+  width: 58px;
+  height: 32px;
+  flex: 0 0 58px;
+  border-radius: var(--k-control-radius);
+  border: var(--k-border-strong);
+  background: linear-gradient(180deg, rgba(220,230,240,0.78), rgba(180,200,216,0.5));
+  box-shadow: var(--k-shadow-control);
+  transition: background var(--k-duration) var(--k-ease), box-shadow var(--k-duration) var(--k-ease);
+}
+
+.k-switch-track::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: calc(var(--k-control-radius) - 8px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(235,248,255,0.72));
+  box-shadow: 0 6px 14px rgba(54,120,160,0.22), inset 0 1px 2px rgba(255,255,255,0.95);
+  transition: transform var(--k-duration) var(--k-ease);
+}
+
+.k-switch-input:checked + .k-switch-track {
+  background: linear-gradient(180deg, rgba(90,200,255,0.86), rgba(40,150,230,0.72));
+  box-shadow: var(--k-shadow-control-focus);
+}
+
+.k-switch-input:checked + .k-switch-track::after {
+  transform: translateX(26px);
+}

@@ -1,0 +1,48 @@
+/* KUI Table v0.1 */
+.k-table-wrap {
+  width: 100%;
+  padding: var(--k-space-5);
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.25));
+  backdrop-filter: var(--k-blur-lg);
+  -webkit-backdrop-filter: var(--k-blur-lg);
+  border: var(--k-border-glass);
+  box-shadow: 0 30px 70px rgba(54,175,230,0.25), inset 0 1px 0 rgba(255,255,255,0.9);
+  overflow-x: auto;
+  scrollbar-gutter: stable;
+}
+
+.k-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-size: var(--k-font-size-md);
+  color: var(--k-text);
+}
+
+.k-table thead th {
+  text-align: left;
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--k-muted-strong);
+  font-size: var(--k-font-size-sm);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.k-table tbody tr {
+  background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(230,245,252,0.45));
+  backdrop-filter: blur(14px);
+  border-radius: var(--k-radius-md);
+  transition: all .18s ease;
+  box-shadow: 0 10px 24px rgba(54,175,230,0.15), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.k-table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(54,175,230,0.25), inset 0 1px 0 rgba(255,255,255,0.95);
+}
+
+.k-table tbody td { padding: 18px; }
+.k-table tbody td:first-child { border-radius: 14px 0 0 14px; }
+.k-table tbody td:last-child { border-radius: 0 14px 14px 0; }

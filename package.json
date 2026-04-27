@@ -1,0 +1,33 @@
+{
+  "name": "@kokbot/kui",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Glass-morphism CSS UI Framework",
+  "main": "dist/kui.css",
+  "style": "dist/kui.css",
+  "exports": {
+    ".": "./dist/kui.css",
+    "./min": "./dist/kui.min.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "postcss src/kui.css -o dist/kui.css && postcss src/kui.css -o dist/kui.min.css --env production",
+    "dev": "postcss src/kui.css -o dist/kui.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0"
+  },
+  "keywords": [
+    "css",
+    "ui-framework",
+    "glass-morphism",
+    "admin"
+  ],
+  "license": "MIT"
+}

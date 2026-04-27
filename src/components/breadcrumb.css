@@ -1,0 +1,38 @@
+/* KUI Breadcrumb */
+.k-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--k-space-2);
+  flex-wrap: wrap;
+}
+
+.k-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: var(--k-space-2);
+  font-size: var(--k-font-size-sm);
+  color: var(--k-muted);
+  font-weight: 500;
+}
+
+.k-breadcrumb-item a,
+.k-breadcrumb-item span:not(.k-breadcrumb-sep) {
+  cursor: pointer;
+  transition: color var(--k-duration-fast) ease;
+}
+
+.k-breadcrumb-item a:hover {
+  color: var(--k-blue-500);
+}
+
+.k-breadcrumb-item.is-active span {
+  color: var(--k-text-strong);
+  font-weight: 600;
+  cursor: default;
+}
+
+.k-breadcrumb-sep {
+  color: var(--k-gray-400);
+  font-size: var(--k-font-size-sm);
+  user-select: none;
+}

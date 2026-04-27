@@ -1,0 +1,60 @@
+/* KUI Utilities — Grid */
+
+:where(.k-grid)        { display: grid; }
+:where(.k-inline-grid) { display: inline-grid; }
+
+/* grid-template-columns */
+:where(.k-cols-1)  { grid-template-columns: repeat(1,  minmax(0,1fr)); }
+:where(.k-cols-2)  { grid-template-columns: repeat(2,  minmax(0,1fr)); }
+:where(.k-cols-3)  { grid-template-columns: repeat(3,  minmax(0,1fr)); }
+:where(.k-cols-4)  { grid-template-columns: repeat(4,  minmax(0,1fr)); }
+:where(.k-cols-5)  { grid-template-columns: repeat(5,  minmax(0,1fr)); }
+:where(.k-cols-6)  { grid-template-columns: repeat(6,  minmax(0,1fr)); }
+:where(.k-cols-7)  { grid-template-columns: repeat(7,  minmax(0,1fr)); }
+:where(.k-cols-8)  { grid-template-columns: repeat(8,  minmax(0,1fr)); }
+:where(.k-cols-9)  { grid-template-columns: repeat(9,  minmax(0,1fr)); }
+:where(.k-cols-10) { grid-template-columns: repeat(10, minmax(0,1fr)); }
+:where(.k-cols-11) { grid-template-columns: repeat(11, minmax(0,1fr)); }
+:where(.k-cols-12) { grid-template-columns: repeat(12, minmax(0,1fr)); }
+
+/* column span */
+:where(.k-col-span-1)  { grid-column: span 1  / span 1; }
+:where(.k-col-span-2)  { grid-column: span 2  / span 2; }
+:where(.k-col-span-3)  { grid-column: span 3  / span 3; }
+:where(.k-col-span-4)  { grid-column: span 4  / span 4; }
+:where(.k-col-span-5)  { grid-column: span 5  / span 5; }
+:where(.k-col-span-6)  { grid-column: span 6  / span 6; }
+:where(.k-col-span-7)  { grid-column: span 7  / span 7; }
+:where(.k-col-span-8)  { grid-column: span 8  / span 8; }
+:where(.k-col-span-9)  { grid-column: span 9  / span 9; }
+:where(.k-col-span-10) { grid-column: span 10 / span 10; }
+:where(.k-col-span-11) { grid-column: span 11 / span 11; }
+:where(.k-col-span-12) { grid-column: span 12 / span 12; }
+:where(.k-col-span-full){ grid-column: 1 / -1; }
+
+/* grid-template-rows */
+:where(.k-rows-1) { grid-template-rows: repeat(1, minmax(0,1fr)); }
+:where(.k-rows-2) { grid-template-rows: repeat(2, minmax(0,1fr)); }
+:where(.k-rows-3) { grid-template-rows: repeat(3, minmax(0,1fr)); }
+:where(.k-rows-4) { grid-template-rows: repeat(4, minmax(0,1fr)); }
+:where(.k-rows-5) { grid-template-rows: repeat(5, minmax(0,1fr)); }
+:where(.k-rows-6) { grid-template-rows: repeat(6, minmax(0,1fr)); }
+
+/* row span */
+:where(.k-row-span-1) { grid-row: span 1 / span 1; }
+:where(.k-row-span-2) { grid-row: span 2 / span 2; }
+:where(.k-row-span-3) { grid-row: span 3 / span 3; }
+:where(.k-row-span-4) { grid-row: span 4 / span 4; }
+:where(.k-row-span-full){ grid-row: 1 / -1; }
+
+/* auto-flow */
+:where(.k-flow-row)       { grid-auto-flow: row; }
+:where(.k-flow-col)       { grid-auto-flow: column; }
+:where(.k-flow-dense)     { grid-auto-flow: dense; }
+:where(.k-flow-row-dense) { grid-auto-flow: row dense; }
+:where(.k-flow-col-dense) { grid-auto-flow: column dense; }
+
+/* place items / content */
+:where(.k-place-center) { place-items: center; }
+:where(.k-place-start)  { place-items: start; }
+:where(.k-place-end)    { place-items: end; }

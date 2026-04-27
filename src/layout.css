@@ -1,0 +1,91 @@
+/* KUI Layout */
+.k-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.k-main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--k-space-8);
+  overflow-x: hidden;
+}
+
+.k-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.k-container-sm  { width: min(var(--k-container-sm),  100%); margin: 0 auto; }
+.k-container-md  { width: min(var(--k-container-md),  100%); margin: 0 auto; }
+.k-container-lg  { width: min(var(--k-container-lg),  100%); margin: 0 auto; }
+.k-container-xl  { width: min(var(--k-container-xl),  100%); margin: 0 auto; }
+.k-container-2xl { width: min(var(--k-container-2xl), 100%); margin: 0 auto; }
+
+.k-panel {
+  padding: var(--k-space-6);
+  border-radius: var(--k-radius-lg);
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.25));
+  border: var(--k-border-glass);
+  backdrop-filter: var(--k-blur-lg);
+  -webkit-backdrop-filter: var(--k-blur-lg);
+  box-shadow: var(--k-shadow-panel);
+}
+
+[data-theme="dark"] .k-panel {
+  background: linear-gradient(180deg, rgba(28,42,64,0.7), rgba(20,32,50,0.4));
+}
+
+/* Heading directly inside a panel always gets breathing room below */
+.k-panel > h1,
+.k-panel > h2,
+.k-panel > h3,
+.k-panel > h4 {
+  margin-bottom: var(--k-space-6);
+  padding-bottom: var(--k-space-4);
+  border-bottom: 1px solid rgba(190, 215, 232, 0.4);
+}
+
+.k-toolbar {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr auto;
+  gap: var(--k-space-4);
+  align-items: center;
+}
+
+.k-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--k-space-4);
+}
+
+.k-row {
+  display: flex;
+  align-items: center;
+  gap: var(--k-space-4);
+}
+
+.k-divider {
+  height: 1px;
+  background: var(--k-border-color);
+  border: none;
+  margin: 0;
+}
+
+.k-section {
+  margin-bottom: var(--k-space-8);
+}
+
+@media (max-width: 900px) {
+  .k-layout {
+    flex-direction: column;
+  }
+
+  .k-main {
+    padding: var(--k-space-4);
+  }
+
+  .k-toolbar {
+    grid-template-columns: 1fr;
+  }
+}

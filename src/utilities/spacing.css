@@ -1,0 +1,157 @@
+/* KUI Utilities — Spacing */
+
+/* padding */
+:where(.k-p-0)  { padding: var(--k-space-0); }
+:where(.k-p-1)  { padding: var(--k-space-1); }
+:where(.k-p-2)  { padding: var(--k-space-2); }
+:where(.k-p-3)  { padding: var(--k-space-3); }
+:where(.k-p-4)  { padding: var(--k-space-4); }
+:where(.k-p-5)  { padding: var(--k-space-5); }
+:where(.k-p-6)  { padding: var(--k-space-6); }
+:where(.k-p-7)  { padding: var(--k-space-7); }
+:where(.k-p-8)  { padding: var(--k-space-8); }
+:where(.k-p-10) { padding: var(--k-space-10); }
+:where(.k-p-12) { padding: var(--k-space-12); }
+
+/* padding-x (left + right) */
+:where(.k-px-0)  { padding-left: var(--k-space-0);  padding-right: var(--k-space-0); }
+:where(.k-px-1)  { padding-left: var(--k-space-1);  padding-right: var(--k-space-1); }
+:where(.k-px-2)  { padding-left: var(--k-space-2);  padding-right: var(--k-space-2); }
+:where(.k-px-3)  { padding-left: var(--k-space-3);  padding-right: var(--k-space-3); }
+:where(.k-px-4)  { padding-left: var(--k-space-4);  padding-right: var(--k-space-4); }
+:where(.k-px-5)  { padding-left: var(--k-space-5);  padding-right: var(--k-space-5); }
+:where(.k-px-6)  { padding-left: var(--k-space-6);  padding-right: var(--k-space-6); }
+:where(.k-px-8)  { padding-left: var(--k-space-8);  padding-right: var(--k-space-8); }
+:where(.k-px-10) { padding-left: var(--k-space-10); padding-right: var(--k-space-10); }
+
+/* padding-y (top + bottom) */
+:where(.k-py-0)  { padding-top: var(--k-space-0);  padding-bottom: var(--k-space-0); }
+:where(.k-py-1)  { padding-top: var(--k-space-1);  padding-bottom: var(--k-space-1); }
+:where(.k-py-2)  { padding-top: var(--k-space-2);  padding-bottom: var(--k-space-2); }
+:where(.k-py-3)  { padding-top: var(--k-space-3);  padding-bottom: var(--k-space-3); }
+:where(.k-py-4)  { padding-top: var(--k-space-4);  padding-bottom: var(--k-space-4); }
+:where(.k-py-5)  { padding-top: var(--k-space-5);  padding-bottom: var(--k-space-5); }
+:where(.k-py-6)  { padding-top: var(--k-space-6);  padding-bottom: var(--k-space-6); }
+:where(.k-py-8)  { padding-top: var(--k-space-8);  padding-bottom: var(--k-space-8); }
+:where(.k-py-10) { padding-top: var(--k-space-10); padding-bottom: var(--k-space-10); }
+
+/* padding individual sides */
+:where(.k-pt-0) { padding-top: var(--k-space-0); }
+:where(.k-pt-1) { padding-top: var(--k-space-1); }
+:where(.k-pt-2) { padding-top: var(--k-space-2); }
+:where(.k-pt-3) { padding-top: var(--k-space-3); }
+:where(.k-pt-4) { padding-top: var(--k-space-4); }
+:where(.k-pt-5) { padding-top: var(--k-space-5); }
+:where(.k-pt-6) { padding-top: var(--k-space-6); }
+:where(.k-pt-8) { padding-top: var(--k-space-8); }
+
+:where(.k-pb-0) { padding-bottom: var(--k-space-0); }
+:where(.k-pb-1) { padding-bottom: var(--k-space-1); }
+:where(.k-pb-2) { padding-bottom: var(--k-space-2); }
+:where(.k-pb-3) { padding-bottom: var(--k-space-3); }
+:where(.k-pb-4) { padding-bottom: var(--k-space-4); }
+:where(.k-pb-5) { padding-bottom: var(--k-space-5); }
+:where(.k-pb-6) { padding-bottom: var(--k-space-6); }
+:where(.k-pb-8) { padding-bottom: var(--k-space-8); }
+
+:where(.k-pl-0) { padding-left: var(--k-space-0); }
+:where(.k-pl-1) { padding-left: var(--k-space-1); }
+:where(.k-pl-2) { padding-left: var(--k-space-2); }
+:where(.k-pl-3) { padding-left: var(--k-space-3); }
+:where(.k-pl-4) { padding-left: var(--k-space-4); }
+:where(.k-pl-6) { padding-left: var(--k-space-6); }
+:where(.k-pl-8) { padding-left: var(--k-space-8); }
+
+:where(.k-pr-0) { padding-right: var(--k-space-0); }
+:where(.k-pr-1) { padding-right: var(--k-space-1); }
+:where(.k-pr-2) { padding-right: var(--k-space-2); }
+:where(.k-pr-3) { padding-right: var(--k-space-3); }
+:where(.k-pr-4) { padding-right: var(--k-space-4); }
+:where(.k-pr-6) { padding-right: var(--k-space-6); }
+:where(.k-pr-8) { padding-right: var(--k-space-8); }
+
+/* margin */
+:where(.k-m-0)  { margin: var(--k-space-0); }
+:where(.k-m-1)  { margin: var(--k-space-1); }
+:where(.k-m-2)  { margin: var(--k-space-2); }
+:where(.k-m-3)  { margin: var(--k-space-3); }
+:where(.k-m-4)  { margin: var(--k-space-4); }
+:where(.k-m-5)  { margin: var(--k-space-5); }
+:where(.k-m-6)  { margin: var(--k-space-6); }
+:where(.k-m-8)  { margin: var(--k-space-8); }
+:where(.k-m-auto){ margin: auto; }
+
+:where(.k-mx-0)   { margin-left: var(--k-space-0);  margin-right: var(--k-space-0); }
+:where(.k-mx-1)   { margin-left: var(--k-space-1);  margin-right: var(--k-space-1); }
+:where(.k-mx-2)   { margin-left: var(--k-space-2);  margin-right: var(--k-space-2); }
+:where(.k-mx-4)   { margin-left: var(--k-space-4);  margin-right: var(--k-space-4); }
+:where(.k-mx-6)   { margin-left: var(--k-space-6);  margin-right: var(--k-space-6); }
+:where(.k-mx-auto){ margin-left: auto; margin-right: auto; }
+
+:where(.k-my-0)   { margin-top: var(--k-space-0);  margin-bottom: var(--k-space-0); }
+:where(.k-my-2)   { margin-top: var(--k-space-2);  margin-bottom: var(--k-space-2); }
+:where(.k-my-4)   { margin-top: var(--k-space-4);  margin-bottom: var(--k-space-4); }
+:where(.k-my-6)   { margin-top: var(--k-space-6);  margin-bottom: var(--k-space-6); }
+:where(.k-my-8)   { margin-top: var(--k-space-8);  margin-bottom: var(--k-space-8); }
+
+:where(.k-mt-0)  { margin-top: var(--k-space-0); }
+:where(.k-mt-1)  { margin-top: var(--k-space-1); }
+:where(.k-mt-2)  { margin-top: var(--k-space-2); }
+:where(.k-mt-3)  { margin-top: var(--k-space-3); }
+:where(.k-mt-4)  { margin-top: var(--k-space-4); }
+:where(.k-mt-5)  { margin-top: var(--k-space-5); }
+:where(.k-mt-6)  { margin-top: var(--k-space-6); }
+:where(.k-mt-8)  { margin-top: var(--k-space-8); }
+:where(.k-mt-10) { margin-top: var(--k-space-10); }
+:where(.k-mt-12) { margin-top: var(--k-space-12); }
+:where(.k-mt-auto){ margin-top: auto; }
+
+:where(.k-mb-0)  { margin-bottom: var(--k-space-0); }
+:where(.k-mb-1)  { margin-bottom: var(--k-space-1); }
+:where(.k-mb-2)  { margin-bottom: var(--k-space-2); }
+:where(.k-mb-3)  { margin-bottom: var(--k-space-3); }
+:where(.k-mb-4)  { margin-bottom: var(--k-space-4); }
+:where(.k-mb-5)  { margin-bottom: var(--k-space-5); }
+:where(.k-mb-6)  { margin-bottom: var(--k-space-6); }
+:where(.k-mb-8)  { margin-bottom: var(--k-space-8); }
+:where(.k-mb-auto){ margin-bottom: auto; }
+
+:where(.k-ml-0)   { margin-left: var(--k-space-0); }
+:where(.k-ml-1)   { margin-left: var(--k-space-1); }
+:where(.k-ml-2)   { margin-left: var(--k-space-2); }
+:where(.k-ml-3)   { margin-left: var(--k-space-3); }
+:where(.k-ml-4)   { margin-left: var(--k-space-4); }
+:where(.k-ml-auto){ margin-left: auto; }
+
+:where(.k-mr-0)   { margin-right: var(--k-space-0); }
+:where(.k-mr-1)   { margin-right: var(--k-space-1); }
+:where(.k-mr-2)   { margin-right: var(--k-space-2); }
+:where(.k-mr-3)   { margin-right: var(--k-space-3); }
+:where(.k-mr-4)   { margin-right: var(--k-space-4); }
+:where(.k-mr-auto){ margin-right: auto; }
+
+/* gap */
+:where(.k-gap-0)  { gap: var(--k-space-0); }
+:where(.k-gap-1)  { gap: var(--k-space-1); }
+:where(.k-gap-2)  { gap: var(--k-space-2); }
+:where(.k-gap-3)  { gap: var(--k-space-3); }
+:where(.k-gap-4)  { gap: var(--k-space-4); }
+:where(.k-gap-5)  { gap: var(--k-space-5); }
+:where(.k-gap-6)  { gap: var(--k-space-6); }
+:where(.k-gap-8)  { gap: var(--k-space-8); }
+:where(.k-gap-10) { gap: var(--k-space-10); }
+:where(.k-gap-12) { gap: var(--k-space-12); }
+
+:where(.k-gap-x-1) { column-gap: var(--k-space-1); }
+:where(.k-gap-x-2) { column-gap: var(--k-space-2); }
+:where(.k-gap-x-3) { column-gap: var(--k-space-3); }
+:where(.k-gap-x-4) { column-gap: var(--k-space-4); }
+:where(.k-gap-x-6) { column-gap: var(--k-space-6); }
+:where(.k-gap-x-8) { column-gap: var(--k-space-8); }
+
+:where(.k-gap-y-1) { row-gap: var(--k-space-1); }
+:where(.k-gap-y-2) { row-gap: var(--k-space-2); }
+:where(.k-gap-y-3) { row-gap: var(--k-space-3); }
+:where(.k-gap-y-4) { row-gap: var(--k-space-4); }
+:where(.k-gap-y-6) { row-gap: var(--k-space-6); }
+:where(.k-gap-y-8) { row-gap: var(--k-space-8); }

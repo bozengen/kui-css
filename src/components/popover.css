@@ -1,0 +1,30 @@
+/* KUI Popover */
+.k-popover {
+  position: relative;
+  display: inline-flex;
+}
+
+.k-popover-panel {
+  position: absolute;
+  top: calc(100% + var(--k-space-3));
+  left: 0;
+  z-index: var(--k-z-tooltip);
+  width: 280px;
+  padding: var(--k-space-4);
+  border-radius: var(--k-control-radius);
+  border: var(--k-border-strong);
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(238,249,255,0.9));
+  box-shadow: var(--k-shadow-card);
+  color: var(--k-text);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px) scale(.98);
+  transition: opacity var(--k-duration-fast) ease, transform var(--k-duration-fast) ease;
+}
+
+.k-popover:hover .k-popover-panel,
+.k-popover:focus-within .k-popover-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}

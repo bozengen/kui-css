@@ -1,0 +1,108 @@
+/* KUI Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-family: var(--k-font-family);
+  font-size: var(--k-font-size-md);
+  line-height: var(--k-leading-normal);
+  color: var(--k-text);
+  background: var(--k-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button { cursor: pointer; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: var(--k-font-weight-semibold);
+  line-height: var(--k-leading-tight);
+}
+
+p { margin: 0; }
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--k-scrollbar-thumb) var(--k-scrollbar-track);
+}
+
+::-webkit-scrollbar {
+  width: var(--k-scrollbar-size);
+  height: var(--k-scrollbar-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--k-scrollbar-track);
+  border-radius: var(--k-scrollbar-radius);
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 40px;
+  border: 2px solid transparent;
+  border-radius: var(--k-scrollbar-radius);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.48), rgba(255,255,255,0.12)) padding-box,
+    var(--k-scrollbar-thumb) border-box;
+  background-clip: padding-box, border-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.56), rgba(255,255,255,0.16)) padding-box,
+    var(--k-scrollbar-thumb-hover) border-box;
+  background-clip: padding-box, border-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ── Utility base classes ───────────────────────────── */
+.k-scene {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 63%, rgba(103, 204, 255, 0.24) 0%, rgba(103, 204, 255, 0.13) 20%, transparent 43%),
+    radial-gradient(ellipse at 50% 58%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.55) 28%, transparent 58%),
+    linear-gradient(180deg, #f7f8fa 0%, #eef2f6 100%);
+}
+
+[data-theme="dark"] .k-scene {
+  background:
+    radial-gradient(ellipse at 50% 63%, rgba(30, 90, 180, 0.18) 0%, transparent 45%),
+    linear-gradient(180deg, #0f1620 0%, #0b1018 100%);
+}
+
+.k-glass {
+  background: linear-gradient(180deg, var(--k-surface), var(--k-surface-muted));
+  border: var(--k-border-glass);
+  backdrop-filter: var(--k-blur-md);
+  -webkit-backdrop-filter: var(--k-blur-md);
+  box-shadow: var(--k-shadow-soft);
+}

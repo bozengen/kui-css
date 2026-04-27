@@ -1,0 +1,50 @@
+/* KUI Timeline */
+.k-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: var(--k-space-2);
+}
+
+/* Vertical line — aligned to dot center (dot: left=0, width=10px → center=5px; line: left=4px, width=2px → center=5px) */
+.k-timeline::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 4px;
+  width: 2px;
+  border-radius: 1px;
+  background: linear-gradient(180deg, rgba(79,196,250,0.35), rgba(195,218,234,0.25));
+}
+
+.k-timeline-item {
+  position: relative;
+  padding-left: var(--k-space-8);
+  padding-bottom: var(--k-space-5);
+}
+
+.k-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.k-timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.k-timeline-title {
+  color: var(--k-text-strong);
+  font-size: var(--k-font-size-sm);
+  font-weight: var(--k-font-weight-semibold);
+  line-height: 1.3;
+}
+
+.k-timeline-desc {
+  margin-top: var(--k-space-1);
+  color: var(--k-muted);
+  font-size: var(--k-font-size-xs);
+  line-height: 1.5;
+}

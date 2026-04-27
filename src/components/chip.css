@@ -1,0 +1,75 @@
+/* KUI Chip / Badge */
+.k-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--k-space-2);
+  padding: 4px 12px;
+  border-radius: calc(var(--k-control-radius) - 6px);
+  font-size: var(--k-font-size-xs);
+  font-weight: 600;
+  border: var(--k-border-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(230,244,252,0.42));
+  color: var(--k-text-strong);
+  white-space: nowrap;
+}
+
+/* color variants */
+.k-chip-blue {
+  background: linear-gradient(180deg, rgba(90,200,255,0.72), rgba(40,150,230,0.55));
+  color: var(--k-blue-800);
+  border-color: rgba(200,240,255,0.85);
+}
+
+.k-chip-green {
+  background: linear-gradient(180deg, rgba(90,230,170,0.72), rgba(35,180,120,0.55));
+  color: var(--k-green-800);
+  border-color: rgba(200,255,220,0.85);
+}
+
+.k-chip-orange {
+  background: linear-gradient(180deg, rgba(255,180,90,0.78), rgba(235,120,40,0.6));
+  color: var(--k-orange-800);
+  border-color: rgba(255,220,160,0.9);
+}
+
+.k-chip-red {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--k-red-400) 78%, white), color-mix(in srgb, var(--k-red-600) 60%, transparent));
+  color: var(--k-red-800);
+  border-color: color-mix(in srgb, var(--k-red-200) 90%, white);
+}
+
+.k-chip-gray {
+  background: linear-gradient(180deg, rgba(220,230,240,0.85), rgba(190,205,220,0.65));
+  color: var(--k-gray-700);
+  border-color: rgba(255,255,255,0.9);
+}
+
+/* dot indicator */
+.k-chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* removable */
+.k-chip-remove {
+  width: 16px;
+  height: 16px;
+  border-radius: calc(var(--k-control-radius) - 10px);
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: background var(--k-duration-fast) ease;
+  font-size: 10px;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+.k-chip-remove:hover {
+  background: rgba(0,0,0,0.25);
+}

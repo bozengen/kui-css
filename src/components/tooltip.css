@@ -1,0 +1,94 @@
+/* KUI Tooltip v0.1 — CSS-only via [data-tooltip] */
+
+[data-tooltip] {
+  position: relative;
+  /* Let the bubble escape elements with overflow:hidden (e.g. .k-btn) */
+  overflow: visible;
+}
+
+/* ── Shared bubble base ─────────────────────────────── */
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  z-index: var(--k-z-tooltip);
+
+  /* Glass-dark surface */
+  background: linear-gradient(145deg, rgba(22,34,56,0.97), rgba(13,21,40,0.95));
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: var(--k-radius-sm);
+  box-shadow:
+    0 16px 36px rgba(0,12,40,0.5),
+    0 4px 12px rgba(0,8,28,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    inset 0 -1px 0 rgba(50,110,200,0.14);
+
+  color: rgba(220,236,255,0.95);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.012em;
+  padding: 7px 13px;
+  max-width: 200px;
+  white-space: normal;
+  text-align: center;
+
+  transition:
+    opacity var(--k-duration-fast) ease,
+    transform var(--k-duration-fast) ease;
+}
+
+/* ── Top (default) — slides up into place ───────────── */
+[data-tooltip]:not([data-tooltip-pos])::after {
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px) scale(0.93);
+}
+
+[data-tooltip]:not([data-tooltip-pos]):hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+/* ── Bottom — slides down ───────────────────────────── */
+[data-tooltip-pos="bottom"]::after {
+  top: calc(100% + 10px);
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px) scale(0.93);
+}
+
+[data-tooltip-pos="bottom"]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+/* ── Left — slides right into place ────────────────── */
+[data-tooltip-pos="left"]::after {
+  top: 50%;
+  right: calc(100% + 10px);
+  left: auto;
+  bottom: auto;
+  transform: translateY(-50%) translateX(6px) scale(0.93);
+}
+
+[data-tooltip-pos="left"]:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+/* ── Right — slides left into place ────────────────── */
+[data-tooltip-pos="right"]::after {
+  top: 50%;
+  left: calc(100% + 10px);
+  bottom: auto;
+  transform: translateY(-50%) translateX(-6px) scale(0.93);
+}
+
+[data-tooltip-pos="right"]:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+}

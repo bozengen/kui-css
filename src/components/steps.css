@@ -1,0 +1,90 @@
+/* KUI Steps */
+.k-steps {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.k-step {
+  position: relative;
+  flex: 1;
+  display: flex;
+  gap: var(--k-space-3);
+  padding-right: var(--k-space-4);
+  color: var(--k-muted-strong);
+}
+
+/* Connector — horizontally centered on the 36px mark */
+.k-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 44px;
+  right: 0;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--k-border-color);
+}
+
+.k-step.is-done:not(:last-child)::after {
+  background: linear-gradient(90deg, rgba(40,150,230,0.45), var(--k-border-color));
+}
+
+/* Mark */
+.k-step-mark {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: var(--k-font-size-sm);
+  font-weight: var(--k-font-weight-bold);
+  color: var(--k-muted-strong);
+  background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(222,238,250,0.62));
+  border: 1.5px solid rgba(195,218,234,0.7);
+  box-shadow: 0 4px 12px rgba(54,175,230,0.10), inset 0 1px 0 rgba(255,255,255,0.92);
+  transition: background var(--k-duration) var(--k-ease), box-shadow var(--k-duration) var(--k-ease);
+}
+
+.k-step.is-done .k-step-mark {
+  color: white;
+  background: linear-gradient(180deg, rgba(90,200,255,0.88), rgba(30,140,225,0.78));
+  border-color: rgba(110,210,255,0.6);
+  box-shadow: 0 4px 14px rgba(30,140,225,0.28), inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+.k-step.is-active .k-step-mark {
+  color: white;
+  background: linear-gradient(180deg, rgba(140,225,255,0.95), rgba(60,170,240,0.88));
+  border-color: rgba(150,228,255,0.75);
+  box-shadow:
+    0 4px 16px rgba(40,150,230,0.35),
+    0 0 0 5px rgba(80,190,255,0.13),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+/* Text */
+.k-step-body {
+  padding-top: var(--k-space-2);
+}
+
+.k-step-title {
+  color: var(--k-text-strong);
+  font-size: var(--k-font-size-sm);
+  font-weight: var(--k-font-weight-semibold);
+  line-height: 1.3;
+}
+
+.k-step.is-active .k-step-title {
+  color: var(--k-blue-600);
+}
+
+.k-step-desc {
+  margin-top: var(--k-space-1);
+  font-size: var(--k-font-size-xs);
+  color: var(--k-muted);
+  line-height: 1.45;
+}

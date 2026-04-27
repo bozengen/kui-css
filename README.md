@@ -2,6 +2,14 @@
 
 A glass-morphism CSS UI framework for modern admin dashboards.
 
+## Preview
+
+![KUI Dashboard](KUI-CSS-1.png)
+
+![KUI Components](KUI-CSS-2.png)
+
+![KUI Dark Mode](KUI-CSS-3.png)
+
 ## Install
 
 ```bash
